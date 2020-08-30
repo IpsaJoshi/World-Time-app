@@ -11,9 +11,9 @@ class _ChooseLocationState extends State<ChooseLocation> {
     await Future.delayed(Duration(seconds: 3), () {
       print('yoshi');
     });
-    //Stimulates network request for user bio 
+    //Stimulates network request for user bio
     Future.delayed(Duration(seconds: 2), () {
-      print('musocian,vegan and gamer');
+      print('musocian,vegan and gamer')
     });
     print('Statement');
   }
