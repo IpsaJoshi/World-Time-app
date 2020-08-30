@@ -6,12 +6,16 @@ class ChooseLocation extends StatefulWidget {
 }
 
 class _ChooseLocationState extends State<ChooseLocation> {
-  void get_data() {
+  void get_data() async {
     //stimiulate network request for user
-    Future.delayed(Duration(seconds: 3), () {
+    await Future.delayed(Duration(seconds: 3), () {
       print('yoshi');
     });
-  print('Statement');
+    //Stimulates network request for user bio 
+    Future.delayed(Duration(seconds: 2), () {
+      print('musocian,vegan and gamer');
+    });
+    print('Statement');
   }
 
   @override
