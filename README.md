@@ -1,16 +1,16 @@
 # world_time_app
 
-A new Flutter project.
+# Updates
+  
+  Inside: Loading file
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+        -added async func named get data
+        -imported JSON package to get dummy data
+        -by using 'get('.....')' we get the data and store in an object called response of Response type i.e a inbuilt class of JSON package.
+        -here await is used do we wait for the whole data before moving on.
+        -this data can be viewed by print(response.body),
+            the o/p is a string so we cannot get individiual properties by writing response.body.id 
+        -so to get data individually we use a method to convert this string into a map
+            by importing dart:convert 
+            The methog we use id jsondecode.
+        -after this u can access individual data like shown in the code.
