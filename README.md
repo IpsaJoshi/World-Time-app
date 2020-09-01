@@ -4,13 +4,14 @@
   
   Inside: Loading file
 
-        -added async func named get data
-        -imported JSON package to get dummy data
-        -by using 'get('.....')' we get the data and store in an object called response of Response type i.e a inbuilt class of JSON package.
-        -here await is used do we wait for the whole data before moving on.
-        -this data can be viewed by print(response.body),
-            the o/p is a string so we cannot get individiual properties by writing response.body.id 
-        -so to get data individually we use a method to convert this string into a map
-            by importing dart:convert 
-            The methog we use id jsondecode.
-        -after this u can access individual data like shown in the code.
+        -added world time api , here i have kolkata's time.
+        -the website id worldtimeapi.org -> Canonical Timezone List
+        -waited for the data to get into response obj.
+        -mapped that info into data.
+        -we need to find the time , so we stored the two properties that we need into  string datetime and offset.
+        -used substring method as we dont want '+' in offset
+        -created a datetime class's obj 'now' and stored pased value of string datetim e.
+        -PARSE defination:
+                   Parse(String)	
+                    Converts the string representation of a date and time to its DateTime equivalent by using the conventions of the current thread culture.
+        -then we add offset and we have the time!!!

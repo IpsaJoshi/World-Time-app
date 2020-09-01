@@ -8,19 +8,31 @@ class Loading extends StatefulWidget {
 }
 
 class _LoadingState extends State<Loading> {
-  void get_data() async {
+  void getTime() async {
+    //make the request
     Response response =
-        await get('https://jsonplaceholder.typicode.com/todos/1');
-    print(response.body); //this whole thing is a string
+        await get('http://worldtimeapi.org/api/timezone/Asia/Kolkata');
     Map data = jsonDecode(response.body);
-    print(data);
-    print(data['id']);
+    //print(data);
+
+    //get properties from data
+    String datetime = data['datetime'];
+    String offset =
+        data['utc_offset'].substring(1, 3); //only taking 05 from +05:00
+    //print(offset);
+    //print(datetime);
+
+    //create datetime object
+    DateTime now = DateTime.parse(datetime);
+    now = now.add(Duration(hours: int.parse(offset)));
+
+    print(now);
   }
 
   @override
   void initState() {
     super.initState();
-    get_data();
+    getTime();
   }
 
   @override
